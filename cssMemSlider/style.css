@@ -7,6 +7,7 @@ body {
   width: 100vw;
   max-width: 1200px;
   margin: 40px auto;
+  background: transparent;
 }
 
 input {
@@ -23,7 +24,8 @@ input {
   height: auto;
 
   border-radius: 10px;
-  background-color: #ffffff;
+  background: transparent;
+  /* background-color: #ffffff; */
   box-shadow: 5px 5px 5px gray;
 }
 
@@ -62,7 +64,6 @@ input {
   width: 100%;
 	opacity: 1;
 	z-index: 1;
-  transform: scale(1);
 }
 
 #slide1:checked ~ .slider > .slide1 > img,
@@ -92,7 +93,6 @@ input {
   font-size: 35px;
   transform: translateX(-100%);
   transition: all 0.8s ease-in-out 0.2s;
-  background-color: #ffffff;
 }
 
 .controls {
@@ -113,10 +113,80 @@ input {
   width: 40px;
   height: 40px;
   margin: 0;
-  /* border-radius: 50px; */
-  background-color: red;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ;
+}
+
+.controls label::before {
+  content: '';
+  position: relative;
+  top: 18.5%;
+  left: 30%;
+
+  display: inline-block;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s;
+} 
+
+#slide1:checked ~ .controls label:nth-of-type(1):active::before,
+#slide2:checked ~ .controls label:nth-of-type(2):active::before,
+#slide3:checked ~ .controls label:nth-of-type(3):active::before,
+#slide4:checked ~ .controls label:nth-of-type(4):active::before,
+#slide5:checked ~ .controls label:nth-of-type(5):active::before {
+  transform: scale(2.5);
+  opacity: 1;
+  background-color: #ebc313;
+}
+
+.controls label:nth-of-type(1):active::before,
+.controls label:nth-of-type(2):active::before,
+.controls label:nth-of-type(3):active::before,
+.controls label:nth-of-type(4):active::before,
+.controls label:nth-of-type(5):active::before {
+  transform: scale(2.5);
+  opacity: 1;
+  background-color: #faf609;
 }
 
 
+.controls label::after {
+  content: '';
+  position: relative;
+  top: -80%;
+  left: 19%;
+
+  display: inline-block;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  background: transparent;
+  /* background: #c2bcbc; */
+  border: 3px solid #77bdd4;
+} 
+
+#slide1:checked ~ .controls label:nth-of-type(1)::after,
+#slide2:checked ~ .controls label:nth-of-type(2)::after,
+#slide3:checked ~ .controls label:nth-of-type(3)::after,
+#slide4:checked ~ .controls label:nth-of-type(4)::after,
+#slide5:checked ~ .controls label:nth-of-type(5)::after {
+  border: 3px solid #0feec9;
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1):hover::after,
+#slide2:checked ~ .controls label:nth-of-type(2):hover::after,
+#slide3:checked ~ .controls label:nth-of-type(3):hover::after,
+#slide4:checked ~ .controls label:nth-of-type(4):hover::after,
+#slide5:checked ~ .controls label:nth-of-type(5):hover::after {
+  border: 3px solid #1759e9;
+  background-color: transparent;
+}
+
+label:hover::after {
+  background-color: #ffffff;
+}
 
 
