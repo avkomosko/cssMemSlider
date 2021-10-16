@@ -76,7 +76,6 @@ input {
 	opacity: 1;
 	z-index: 1;
   transform: scale(1);
-  transform: rotate(360deg);
 }
 
 #slide1:checked ~ .slider > .slide1 > .slide-text,
@@ -99,8 +98,6 @@ input {
 .controls {
   position: relative;
   z-index: 2;
-  /* top: 0;
-  left: 0; */
   transform: translateY(-100%);
   justify-self: flex-end;
   display: flex;
