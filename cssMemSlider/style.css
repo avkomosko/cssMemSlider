@@ -4,9 +4,11 @@ body {
 
 .container {
   display: grid;
+
   width: 100vw;
   max-width: 1200px;
   margin: 40px auto;
+
   background: transparent;
 }
 
@@ -33,13 +35,15 @@ input {
 .slide3,
 .slide4,
 .slide5 {
-  height: 0; 
-  width: 0;
+  z-index: 0;
   position: relative;
   top: 0;
   left: 0;
+
+  width: 100%;
+  height: 0; 
+  
   opacity: 0;
-  z-index: 0;
 }
 
 .slide1 > .slide-img,
@@ -48,8 +52,10 @@ input {
 .slide4 > .slide-img,
 .slide5 > .slide-img {
   object-fit: cover;
-  border: 0 1px 0 1px solid #030303;
+
   transform: translateX(-100%);
+
+  border: 0 1px 0 1px solid #030303;
   transition: all 0.5s ease-in-out 0s;
 }
 
@@ -59,10 +65,12 @@ input {
 #slide3:checked ~ .slider > .slide3,
 #slide4:checked ~ .slider > .slide4,
 #slide5:checked ~ .slider > .slide5 {
-  height: auto;
+  z-index: 1;
+
   width: 100%;
+  height: auto;
+  
 	opacity: 1;
-	z-index: 1;
 }
 
 #slide1:checked ~ .slider > .slide1 > img,
@@ -70,11 +78,13 @@ input {
 #slide3:checked ~ .slider > .slide3 > img,
 #slide4:checked ~ .slider > .slide4 > img,
 #slide5:checked ~ .slider > .slide5  > img{
+  z-index: 1;
   object-fit: cover;
+
   width: 100%;
   height: auto;
+
 	opacity: 1;
-	z-index: 1;
   transform: scale(1);
 }
 
@@ -91,30 +101,32 @@ input {
   padding: 0 0 0 10px;
   font-size: 35px;
   transform: translateX(-100%);
-  transition: all 0.8s ease-in-out 0.2s;
+  transition: all 0.6s ease-in-out 0.2s;
 }
 
 .controls {
   position: relative;
   z-index: 2;
-  transform: translateY(-100%);
-  justify-self: flex-end;
-  display: flex;
-  justify-content: space-between;
 
   margin: 0;
   width: clamp(120px, 220px, 420px);
-  color: #000;
+
+  display: flex;
+  justify-content: space-between;
+  justify-self: flex-end;
+  
+  transform: translateY(-100%);
 }
 
 .controls label {
-  line-height: 40px;
   width: 40px;
   height: 40px;
   margin: 0;
+
+  line-height: 40px;
   cursor: pointer;
   border-radius: 50%;
-  transition: all 0.3s ;
+  transition: all 0.5s linear 0s;
 }
 
 .controls label::before {
@@ -128,7 +140,7 @@ input {
   min-height: 20px;
   border-radius: 50%;
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.5s linear 0s;
 } 
 
 #slide1:checked ~ .controls label:nth-of-type(1):active::before,
@@ -161,9 +173,10 @@ input {
   display: inline-block;
   min-width: 25px;
   min-height: 25px;
+
+  border: 3px solid #2a8dad;
   border-radius: 50%;
   background: transparent;
-  border: 3px solid #2a8dad;
 } 
 
 #slide1:checked ~ .controls label:nth-of-type(1)::after,
@@ -188,3 +201,32 @@ label:hover::after {
 }
 
 
+@media (max-width: 1200px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-text {
+    margin: 60px 0 0 0;
+    font-size: 30px;
+  }
+
+  .controls {
+    transform: translateY(-270%);
+    justify-self: center;
+  }
+
+  .controls label {
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .controls label::after {
+    min-width: 15px;
+    min-height: 15px;
+  } 
+
+}
