@@ -1,0 +1,59 @@
+[33mcommit 012e3be46985d43a492aa7006966428564869aeb[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 17:49:51 2021 +0300
+
+    fix: delete project from main
+
+[33mcommit cf12ac5f30d869ff407f7210fdcdb5bac8304d6a[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 17:27:50 2021 +0300
+
+    feat: add media queries for mobile and finish task (Sat, Oct 16, 2021 05:27 PM)
+
+[33mcommit 88b573812f260693696c153a692f0c9a78b85078[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 16:35:56 2021 +0300
+
+    refactor: change collors for better contrast (Sat, Oct 16, 2021 04:35 PM)
+
+[33mcommit 42c739193aa24657ab834d6df75ff68b48c3a33f[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 16:30:31 2021 +0300
+
+    feat: add interactivity to control elements (Sat, Oct 16, 2021 04:30 PM)
+
+[33mcommit b1280a1647bc5da4f63452100bcd8c0a00a21366[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 14:48:04 2021 +0300
+
+    fix: correct typos in html (Sat, Oct 16, 2021 02:42 PM)
+
+[33mcommit 3e9b9cf888b2f9df5ab03362fc21a7e5e5540967[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 14:43:39 2021 +0300
+
+    feat: add responsive style to slider (Sat, Oct 16, 2021 02:42 PM
+
+[33mcommit a7b552146bb6de7a1033afbb4ad24fce183b5c3d[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 13:48:53 2021 +0300
+
+    feat: add animation to images and text (Sat, Oct 16, 2021 11:52 AM
+
+[33mcommit 36e80da3732a01a5abd7981c1a3331342e38e095[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 11:52:04 2021 +0300
+
+    feat: add basic styles and functionality (Sat, Oct 16, 2021 11:52 AM
+
+[33mcommit ef0964d01b075b10da96516019c2ee3e327d9ce3[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Sat Oct 16 10:34:15 2021 +0300
+
+    feat: add basic markup (Sat, Oct 16, 2021 10:35 AM
+
+[33mcommit dbeec7a016e428cdc5cf8ff0f9044e6a3637d95f[m
+Author: Aliaksei <avkomosko@gmail.com>
+Date:   Fri Oct 15 21:27:27 2021 +0300
+
+    init: start cssMemSlider-task (Fri, Oct 15, 2021 09:20 PM)
